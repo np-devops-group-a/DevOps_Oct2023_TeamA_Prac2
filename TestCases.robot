@@ -1,9 +1,33 @@
 *** Settings ***
+Library    SeleniumLibrary
+Library    OperatingSystem
+Library    String
+Library    Dialogs
+Library    RequestsLibrary
 Documentation       This project is to test the Temasek Polytechnic Website using Behaviour Driven Development
+Resource    variables.robot
 
-Library             SeleniumLibrary
-Resource            variables.robot
+*** Test Cases ***
+# =====================================Seng Jun's Test Cases======================================
 
+Search for Courses
+    [Documentation]  This is a test case documentation. This test case is a test on search bar of TP website.
+    Open TP Website
+    Click Element    ${search_locator}
+    Input Text    ${search_locator}   text=Courses
+    Press Keys    None    ENTER
+    Sleep    5s
+    [Teardown]    Close Browser
+
+Check on ITE Students Application Guide
+    [Documentation]  This is a test case documentation. This test case is a test to check on application guide submenu.
+    Open TP Website
+    Maximize Browser Window
+    Click Element    ${admissions_finance}
+    Click Element    ${ite_students}
+    Sleep    5s
+    [Teardown]    Close Browser
+# ==================================End of Seng Jun's Test Cases==================================
 
 *** Test Cases ***
 # =====================================Kuan Zher's Test Cases======================================
@@ -39,9 +63,11 @@ Navigate to and search FAQ
 
 # ==================================End of Kuan Zher's Test Cases==================================
 
-
 *** Keywords ***
 Open TP Website
     [Documentation]    This is just a simple keyword to open a new Chrome browser to the TP website
     Open Browser    ${tp_url}    chrome
+    Title Should Be   Home | Temasek Polytechnic
     Maximize Browser Window
+    
+  
