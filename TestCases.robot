@@ -77,6 +77,29 @@ View TP School of Informatics and IT using campus map
     Set Screenshot Directory    ${ss_isabelle}
     Capture Page Screenshot    filename=${School}.png
     [Teardown]    Close Browser
+
+Subscribe to updates on Adult Learner courses
+    [Documentation]    This test case navigates to TP's link for adult learners to subscribe to updates on course
+    Open TP Website
+    Accept Cookies
+    Click Element    //*[contains(text(),"Schools & Courses")]   
+    Click Element    partial link:Subscription to Updates
+    Sleep    3s
+    Select Checkbox    id:mce-group[48789]-48789-6
+    Select Checkbox    id:mce-group[48757]-48757-0
+    Click Element    id:mce-SALUTATION
+    Click Element    xpath:/html/body/div[3]/div[1]/div/div[4]/div/div/div/div/div[1]/div/div/form/div/div[5]/select/option[2]
+    Click Element    id:mce-NAME
+    Input Text    id:mce-NAME   Ben Low
+    Click Element    id:mce-EMAIL
+    Input Text    id:mce-EMAIL   test123@test.com
+    Click Element    id:mce-MOBILE
+    Input Text    id:mce-MOBILE   81234567
+    Sleep    1s
+    Click Element    id:mc-embedded-subscribe
+    Set Screenshot Directory    ${ss_isabelle}
+    Capture Page Screenshot    filename=SubscriptionToUpdates-{index}.png
+    [Teardown]    Close Browser
 # ==================================End of Isabelle's Test Cases===================================
 
 *** Keywords ***
