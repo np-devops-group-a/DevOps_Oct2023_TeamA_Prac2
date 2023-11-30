@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.9.5 on win32)" generated="20231130 09:25:08.389" rpa="false" schemaversion="4">
+<suite id="s1" name="TestCases" source="c:\Users\kzgre\DevOps\Practicals\DevOps_Oct2023_TeamA_Prac2\TestCases.robot">
+<test id="s1-t1" name="Navigate to 2023/2024 Academic Calendar" line="33">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${tp_url}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231130 09:25:08.630" level="INFO">Opening browser 'chrome' to base url 'https://www.tp.edu.sg/home.html'.</msg>
+<status status="PASS" starttime="20231130 09:25:08.629" endtime="20231130 09:25:12.341"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20231130 09:25:12.342" endtime="20231130 09:25:12.473"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[contains(text(),"Schools &amp; Courses")]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231130 09:25:12.475" level="INFO">Clicking element '//*[contains(text(),"Schools &amp; Courses")]'.</msg>
+<status status="PASS" starttime="20231130 09:25:12.474" endtime="20231130 09:25:12.591"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//a[contains(text(),"Academic Calendar")]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231130 09:25:12.594" level="INFO">Clicking element '//a[contains(text(),"Academic Calendar")]'.</msg>
+<status status="PASS" starttime="20231130 09:25:12.593" endtime="20231130 09:25:13.411"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Academic Calendar | Temasek Polytechnic</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20231130 09:25:13.421" level="INFO">Page title is 'Academic Calendar | Temasek Polytechnic'.</msg>
+<status status="PASS" starttime="20231130 09:25:13.412" endtime="20231130 09:25:13.421"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${calendar_button_span}@outerHTML</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<msg timestamp="20231130 09:25:13.946" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-5.png"&gt;&lt;img src="selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20231130 09:25:13.947" level="FAIL">InvalidSelectorException: Message: invalid selector: Unable to locate an element with the xpath expression //span[contains(text(),"AY2023/2024 Academic Calendar")]@outerHTML because of the following error:
+SyntaxError: Failed to execute 'evaluate' on 'Document': The string '//span[contains(text(),"AY2023/2024 Academic Calendar")]@outerHTML' is not a valid XPath expression.
+  (Session info: chrome=119.0.6045.199); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalid-selector-exception
+Stacktrace:
+	GetHandleVerifier [0x00007FF6302782B2+55298]
+	(No symbol) [0x00007FF6301E5E02]
+	(No symbol) [0x00007FF6300A05AB]
+	(No symbol) [0x00007FF6300A509C]
+	(No symbol) [0x00007FF6300A6FDF]
+	(No symbol) [0x00007FF6300A70D0]
+	(No symbol) [0x00007FF6300E13E4]
+	(No symbol) [0x00007FF6300E18DC]
+	(No symbol) [0x00007FF63011CBF7]
+	(No symbol) [0x00007FF6301020EF]
+	(No symbol) [0x00007FF63011AAA4]
+	(No symbol) [0x00007FF630101E83]
+	(No symbol) [0x00007FF6300D670A]
+	(No symbol) [0x00007FF6300D7964]
+	GetHandleVerifier [0x00007FF6305F0AAB+3694587]
+	GetHandleVerifier [0x00007FF63064728E+4048862]
+	GetHandleVerifier [0x00007FF63063F173+4015811]
+	GetHandleVerifier [0x00007FF6303147D6+695590]
+	(No symbol) [0x00007FF6301F0CE8]
+	(No symbol) [0x00007FF6301ECF34]
+	(No symbol) [0x00007FF6301ED062]
+	(No symbol) [0x00007FF6301DD3A3]
+	BaseThreadInitThunk [0x00007FF86A44257D+29]
+	RtlUserThreadStart [0x00007FF86B68AA58+40]
+</msg>
+<status status="FAIL" starttime="20231130 09:25:13.421" endtime="20231130 09:25:13.952"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${calendar_button_span}@outerHTML</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20231130 09:25:13.953" endtime="20231130 09:25:13.954"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>//td[contains(text(),"31 Jul - 20 Aug 2023")]</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="NOT RUN" starttime="20231130 09:25:13.954" endtime="20231130 09:25:13.954"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>filename=AcademicCalendar-{index}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="NOT RUN" starttime="20231130 09:25:13.955" endtime="20231130 09:25:13.955"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20231130 09:25:13.956" endtime="20231130 09:25:16.180"/>
+</kw>
+<status status="FAIL" starttime="20231130 09:25:08.628" endtime="20231130 09:25:16.182">InvalidSelectorException: Message: invalid selector: Unable to locate an element with the xpath expression //span[contains(text(),"AY2023/2024 Academic Calendar")]@outerHTML because of the following error:
+SyntaxError: Failed to execute 'evaluate' on 'Document': The string '//span[contains(text(),"AY2023/2024 Academic Calendar")]@outerHTML' is not a valid XPath expression.
+  (Session info: chrome=119.0.6045.199); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalid-selector-exception
+Stacktrace:
+	GetHandleVerifier [0x00007FF6302782B2+55298]
+	(No symbol) [0x00007FF6301E5E02]
+	(No symbol) [0x00007FF6300A05AB]
+	(No symbol) [0x00007FF6300A509C]
+	(No symbol) [0x00007FF6300A6FDF]
+	(No symbol) [0x00007FF6300A70D0]
+	(No symbol) [0x00007FF6300E13E4]
+	(No symbol) [0x00007FF6300E18DC]
+	(No symbol) [0x00007FF63011CBF7]
+	(No symbol) [0x00007FF6301020EF]
+	(No symbol) [0x00007FF63011AAA4]
+	(No symbol) [0x00007FF630101E83]
+	(No symbol) [0x00007FF6300D670A]
+	(No symbol) [0x00007FF6300D7964]
+	GetHandleVerifier [0x00007FF6305F0AAB+3694587]
+	GetHandleVerifier [0x00007FF63064728E+4048862]
+	GetHandleVerifier [0x00007FF63063F173+4015811]
+	GetHandleVerifier [0x00007FF6303147D6+695590]
+	(No symbol) [0x00007FF6301F0CE8]
+	(No symbol) [0x00007FF6301ECF34]
+	(No symbol) [0x00007FF6301ED062]
+	(No symbol) [0x00007FF6301DD3A3]
+	BaseThreadInitThunk [0x00007FF86A44257D+29]
+	RtlUserThreadStart [0x00007FF86B68AA58+40]
+</status>
+</test>
+<doc>This project is to test the Temasek Polytechnic Website using Behaviour Driven Development</doc>
+<status status="FAIL" starttime="20231130 09:25:08.395" endtime="20231130 09:25:16.192"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="TestCases">TestCases</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
