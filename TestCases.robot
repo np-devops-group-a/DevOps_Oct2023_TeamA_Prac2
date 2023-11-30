@@ -63,11 +63,28 @@ Navigate to and search FAQ
 
 # ==================================End of Kuan Zher's Test Cases==================================
 
+# =====================================Isabelle's Test Cases=======================================
+View TP School of Informatics and IT using campus map
+    [Documentation]    This test case navigates to TP's campus map and view details about the School of Informatics and IT
+    Open TP Website
+    Accept Cookies
+    Scroll Element Into View    partial link:Campus Map
+    Click Element    partial link:Campus Map
+    Click Element    id:select-mapSchools
+    Click Element    xpath://html/body/div[3]/div[1]/div/div[4]/div/div/div[1]/div/div/div/div[2]/select/option[7]
+    Click Element    class:view-detail-tag
+    ${School}    Get Text    class:tp--campus-directory-title
+    Set Screenshot Directory    ${ss_isabelle}
+    Capture Page Screenshot    filename=${School}.png
+    [Teardown]    Close Browser
+# ==================================End of Isabelle's Test Cases===================================
+
 *** Keywords ***
 Open TP Website
     [Documentation]    This is just a simple keyword to open a new Chrome browser to the TP website
-    Open Browser    ${tp_url}    chrome
+    Open Browser    ${tp_url}    edge
     Title Should Be   Home | Temasek Polytechnic
     Maximize Browser Window
     
-  
+Accept Cookies
+    Click Element    class:cmp-t-and-c-cookie-close
