@@ -63,6 +63,32 @@ Navigate to and search FAQ
 
 # ==================================End of Kuan Zher's Test Cases==================================
 
+# =====================================Jia Chen's Test Cases======================================
+Navigate to Online Form to attend Seminar
+    [Documentation]     This test case is to navigate to the online form for the School of Informatics & IT seminar from the home page
+    Open Browser    https://tp.edu.sg    chrome
+    Title Should Be   Open House 2024 | Temasek Polytechnic
+
+    Wait Until Page Contains Element    xpath=//*[@id="webinar"]/div/div[2]/div[3]    5
+    
+    Run Keyword and Ignore Error    Wait Until Page Contains Element    xpath=//*[@id="main"]/div/div/div[6]/a    5
+    Run Keyword and Ignore Error    Scroll Element Into View    xpath=//*[@id="main"]/div/div/div[6]/a
+    Sleep    1s
+    Click Element    xpath=//*[@id="main"]/div/div/div[6]/a
+    Sleep    5s
+    Click Element    xpath=//*[@id="carouselExample"]/div/div/div/div/div/a
+
+    Sleep    5s
+
+    Title Should Be   School of Informatics & IT Seminar | Register For Our Seminar | Open House 2024 | Temasek Polytechnic
+
+    Set Screenshot Directory    ${screenshot_dir}
+    Capture Page Screenshot    filename=Seminar-{index}.png
+
+    [Teardown]    Close Browser
+
+# ==================================End of Jia Chen's Test Cases==================================
+
 *** Keywords ***
 Open TP Website
     [Documentation]    This is just a simple keyword to open a new Chrome browser to the TP website

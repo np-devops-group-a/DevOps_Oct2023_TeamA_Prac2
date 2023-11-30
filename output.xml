@@ -1,176 +1,137 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.9.5 on win32)" generated="20231130 12:59:19.044" rpa="false" schemaversion="4">
-<suite id="s1" name="Testcases" source="c:\Users\kzgre\DevOps\Practicals\DevOps_Oct2023_TeamA_Prac2\testcases.robot">
-<test id="s1-t1" name="Play Campus Virtual Tour" line="10">
-<kw name="Open TP Website">
+<robot generator="Robot 6.1.1 (Python 3.9.12 on darwin)" generated="20231130 23:23:33.990" rpa="false" schemaversion="4">
+<suite id="s1" name="TestCases" source="/Users/jiachen/Desktop/Projects/Ngee Ann Poly/Sem 3.2/DevOps/Week 3-4/DevOps_Oct2023_TeamA_Prac2/TestCases.robot">
+<test id="s1-t1" name="Navigate to Online Form to attend Seminar" line="67">
 <kw name="Open Browser" library="SeleniumLibrary">
-<arg>${tp_url}</arg>
+<arg>https://tp.edu.sg</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20231130 12:59:19.292" level="INFO">Opening browser 'chrome' to base url 'https://www.tp.edu.sg/home.html'.</msg>
-<status status="PASS" starttime="20231130 12:59:19.292" endtime="20231130 12:59:48.153"/>
-</kw>
-<kw name="Maximize Browser Window" library="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20231130 12:59:48.153" endtime="20231130 12:59:48.280"/>
-</kw>
-<status status="PASS" starttime="20231130 12:59:19.291" endtime="20231130 12:59:48.280"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>//*[contains(text(),"Life@TP")]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20231130 12:59:48.281" level="INFO">Clicking element '//*[contains(text(),"Life@TP")]'.</msg>
-<status status="PASS" starttime="20231130 12:59:48.281" endtime="20231130 12:59:48.364"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>//a[contains(text(),"360-Virtual Campus Tour")]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20231130 12:59:48.366" level="INFO">Clicking element '//a[contains(text(),"360-Virtual Campus Tour")]'.</msg>
-<status status="PASS" starttime="20231130 12:59:48.366" endtime="20231130 12:59:49.846"/>
+<msg timestamp="20231130 23:23:34.162" level="INFO">Opening browser 'chrome' to base url 'https://tp.edu.sg'.</msg>
+<status status="PASS" starttime="20231130 23:23:34.162" endtime="20231130 23:23:38.695"/>
 </kw>
 <kw name="Title Should Be" library="SeleniumLibrary">
-<arg>Campus Virtual Tour | Temasek Polytechnic</arg>
+<arg>Open House 2024 | Temasek Polytechnic</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20231130 12:59:49.949" level="INFO">Page title is 'Campus Virtual Tour | Temasek Polytechnic'.</msg>
-<status status="PASS" starttime="20231130 12:59:49.848" endtime="20231130 12:59:49.949"/>
+<msg timestamp="20231130 23:23:38.700" level="INFO">Page title is 'Open House 2024 | Temasek Polytechnic'.</msg>
+<status status="PASS" starttime="20231130 23:23:38.696" endtime="20231130 23:23:38.700"/>
 </kw>
-<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
-<arg>id:landing_explore_button</arg>
-<doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" starttime="20231130 12:59:49.950" endtime="20231130 12:59:49.996"/>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>xpath=//*[@id="webinar"]/div/div[2]/div[3]</arg>
+<arg>5</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20231130 23:23:38.701" endtime="20231130 23:23:38.713"/>
 </kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>id:landing_explore_button</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20231130 12:59:49.999" level="INFO">Clicking element 'id:landing_explore_button'.</msg>
-<status status="PASS" starttime="20231130 12:59:49.998" endtime="20231130 12:59:50.057"/>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<arg>Wait Until Page Contains Element</arg>
+<arg>xpath=//*[@id="main"]/div/div/div[6]/a</arg>
+<arg>5</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>xpath=//*[@id="main"]/div/div/div[6]/a</arg>
+<arg>5</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20231130 23:23:38.714" endtime="20231130 23:23:38.723"/>
 </kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>id:landingPage_introVid</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20231130 12:59:50.058" endtime="20231130 12:59:50.539"/>
+<status status="PASS" starttime="20231130 23:23:38.714" endtime="20231130 23:23:38.723"/>
 </kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>id:landingPage_introVid</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20231130 12:59:50.541" level="INFO">Clicking element 'id:landingPage_introVid'.</msg>
-<status status="PASS" starttime="20231130 12:59:50.539" endtime="20231130 12:59:51.447"/>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<arg>Scroll Element Into View</arg>
+<arg>xpath=//*[@id="main"]/div/div/div[6]/a</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>xpath=//*[@id="main"]/div/div/div[6]/a</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<msg timestamp="20231130 23:23:39.243" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20231130 23:23:39.243" level="FAIL">MoveTargetOutOfBoundsException: Message: move target out of bounds
+  (Session info: chrome=119.0.6045.199)
+Stacktrace:
+0   chromedriver                        0x000000010054e004 chromedriver + 4169732
+1   chromedriver                        0x0000000100545ff8 chromedriver + 4136952
+2   chromedriver                        0x000000010019b348 chromedriver + 291656
+3   chromedriver                        0x0000000100224188 chromedriver + 852360
+4   chromedriver                        0x000000010021b818 chromedriver + 817176
+5   chromedriver                        0x00000001001d45e8 chromedriver + 525800
+6   chromedriver                        0x00000001001d54b8 chromedriver + 529592
+7   chromedriver                        0x0000000100514334 chromedriver + 3932980
+8   chromedriver                        0x0000000100518970 chromedriver + 3950960
+9   chromedriver                        0x00000001004fc774 chromedriver + 3835764
+10  chromedriver                        0x0000000100519478 chromedriver + 3953784
+11  chromedriver                        0x00000001004eeab4 chromedriver + 3779252
+12  chromedriver                        0x0000000100535914 chromedriver + 4069652
+13  chromedriver                        0x0000000100535a90 chromedriver + 4070032
+14  chromedriver                        0x0000000100545c70 chromedriver + 4136048
+15  libsystem_pthread.dylib             0x0000000183455034 _pthread_start + 136
+16  libsystem_pthread.dylib             0x000000018344fe3c thread_start + 8
+</msg>
+<status status="FAIL" starttime="20231130 23:23:38.724" endtime="20231130 23:23:39.246"/>
 </kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>5s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20231130 12:59:56.453" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" starttime="20231130 12:59:51.449" endtime="20231130 12:59:56.453"/>
-</kw>
-<kw name="Set Screenshot Directory" library="SeleniumLibrary">
-<arg>${screenshot_dir}</arg>
-<doc>Sets the directory for captured screenshots.</doc>
-<status status="PASS" starttime="20231130 12:59:56.455" endtime="20231130 12:59:56.456"/>
-</kw>
-<kw name="Capture Page Screenshot" library="SeleniumLibrary">
-<arg>filename=VirtualTour-{index}.png</arg>
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<msg timestamp="20231130 12:59:57.245" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshots/KuanZher/VirtualTour-1.png"&gt;&lt;img src="Screenshots/KuanZher/VirtualTour-1.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20231130 12:59:56.458" endtime="20231130 12:59:57.246"/>
-</kw>
-<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
-<doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20231130 12:59:57.247" endtime="20231130 12:59:59.456"/>
-</kw>
-<status status="PASS" starttime="20231130 12:59:19.290" endtime="20231130 12:59:59.456"/>
-</test>
-<test id="s1-t2" name="Navigate to FAQ and Search for Course in Aerospace Electronics FAQ" line="24">
-<kw name="Open TP Website">
-<kw name="Open Browser" library="SeleniumLibrary">
-<arg>${tp_url}</arg>
-<arg>chrome</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20231130 12:59:59.456" level="INFO">Opening browser 'chrome' to base url 'https://www.tp.edu.sg/home.html'.</msg>
-<status status="PASS" starttime="20231130 12:59:59.456" endtime="20231130 13:00:05.875"/>
-</kw>
-<kw name="Maximize Browser Window" library="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20231130 13:00:05.876" endtime="20231130 13:00:06.011"/>
-</kw>
-<status status="PASS" starttime="20231130 12:59:59.456" endtime="20231130 13:00:06.011"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>//*[contains(text(),"About TP")]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20231130 13:00:06.013" level="INFO">Clicking element '//*[contains(text(),"About TP")]'.</msg>
-<status status="PASS" starttime="20231130 13:00:06.012" endtime="20231130 13:00:06.063"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>//a[contains(text(),"FAQ")]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20231130 13:00:06.065" level="INFO">Clicking element '//a[contains(text(),"FAQ")]'.</msg>
-<status status="PASS" starttime="20231130 13:00:06.064" endtime="20231130 13:00:07.781"/>
-</kw>
-<kw name="Title Should Be" library="SeleniumLibrary">
-<arg>FAQ | Temasek Polytechnic</arg>
-<doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20231130 13:00:07.794" level="INFO">Page title is 'FAQ | Temasek Polytechnic'.</msg>
-<status status="PASS" starttime="20231130 13:00:07.783" endtime="20231130 13:00:07.795"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>id:search-content-faq</arg>
-<arg>Course</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231130 13:00:07.799" level="INFO">Typing text 'Course' into text field 'id:search-content-faq'.</msg>
-<status status="PASS" starttime="20231130 13:00:07.797" endtime="20231130 13:00:07.955"/>
-</kw>
-<kw name="Select From List By Value" library="SeleniumLibrary">
-<arg>faq-path-select</arg>
-<arg>/content/dam/tp-web/content-fragments/faq/aerospace-electronics-faq</arg>
-<doc>Selects options from selection list ``locator`` by ``values``.</doc>
-<msg timestamp="20231130 13:00:07.955" level="INFO">Selecting options from selection list 'faq-path-select' by value /content/dam/tp-web/content-fragments/faq/aerospace-electronics-faq.</msg>
-<status status="PASS" starttime="20231130 13:00:07.955" endtime="20231130 13:00:08.075"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>//dd[contains(text(),"What is this course about?")]</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20231130 13:00:08.077" endtime="20231130 13:00:08.559"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>//dd[contains(text(),"What is this course about?")]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20231130 13:00:08.559" level="INFO">Clicking element '//dd[contains(text(),"What is this course about?")]'.</msg>
-<status status="PASS" starttime="20231130 13:00:08.559" endtime="20231130 13:00:08.653"/>
+<status status="PASS" starttime="20231130 23:23:38.723" endtime="20231130 23:23:39.246"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20231130 13:00:09.663" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20231130 13:00:08.653" endtime="20231130 13:00:09.663"/>
+<msg timestamp="20231130 23:23:40.247" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20231130 23:23:39.247" endtime="20231130 23:23:40.247"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//*[@id="main"]/div/div/div[6]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231130 23:23:40.248" level="INFO">Clicking element 'xpath=//*[@id="main"]/div/div/div[6]/a'.</msg>
+<status status="PASS" starttime="20231130 23:23:40.248" endtime="20231130 23:23:40.809"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231130 23:23:45.812" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20231130 23:23:40.810" endtime="20231130 23:23:45.812"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//*[@id="carouselExample"]/div/div/div/div/div/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231130 23:23:45.813" level="INFO">Clicking element 'xpath=//*[@id="carouselExample"]/div/div/div/div/div/a'.</msg>
+<status status="PASS" starttime="20231130 23:23:45.813" endtime="20231130 23:23:51.040"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231130 23:23:56.043" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20231130 23:23:51.040" endtime="20231130 23:23:56.043"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>School of Informatics &amp; IT Seminar | Register For Our Seminar | Open House 2024 | Temasek Polytechnic</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20231130 23:23:56.047" level="INFO">Page title is 'School of Informatics &amp; IT Seminar | Register For Our Seminar | Open House 2024 | Temasek Polytechnic'.</msg>
+<status status="PASS" starttime="20231130 23:23:56.043" endtime="20231130 23:23:56.047"/>
 </kw>
 <kw name="Set Screenshot Directory" library="SeleniumLibrary">
 <arg>${screenshot_dir}</arg>
 <doc>Sets the directory for captured screenshots.</doc>
-<status status="PASS" starttime="20231130 13:00:09.663" endtime="20231130 13:00:09.663"/>
+<status status="PASS" starttime="20231130 23:23:56.047" endtime="20231130 23:23:56.048"/>
 </kw>
 <kw name="Capture Page Screenshot" library="SeleniumLibrary">
-<arg>filename=FAQSearch-{index}.png</arg>
+<arg>filename=Seminar-{index}.png</arg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<msg timestamp="20231130 13:00:09.874" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshots/KuanZher/FAQSearch-1.png"&gt;&lt;img src="Screenshots/KuanZher/FAQSearch-1.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20231130 13:00:09.663" endtime="20231130 13:00:09.874"/>
+<msg timestamp="20231130 23:23:56.417" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshots/KuanZher/Seminar-2.png"&gt;&lt;img src="Screenshots/KuanZher/Seminar-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20231130 23:23:56.048" endtime="20231130 23:23:56.417"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20231130 13:00:09.874" endtime="20231130 13:00:12.051"/>
+<status status="PASS" starttime="20231130 23:23:56.417" endtime="20231130 23:23:56.595"/>
 </kw>
-<status status="PASS" starttime="20231130 12:59:59.456" endtime="20231130 13:00:12.052"/>
+<doc>This test case is to navigate to the online form for the School of Informatics &amp; IT seminar from the home page</doc>
+<status status="PASS" starttime="20231130 23:23:34.161" endtime="20231130 23:23:56.595"/>
 </test>
 <doc>This project is to test the Temasek Polytechnic Website using Behaviour Driven Development</doc>
-<status status="PASS" starttime="20231130 12:59:19.050" endtime="20231130 13:00:12.054"/>
+<status status="PASS" starttime="20231130 23:23:33.993" endtime="20231130 23:23:56.597"/>
 </suite>
 <statistics>
 <total>
-<stat pass="2" fail="0" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="2" fail="0" skip="0" id="s1" name="Testcases">Testcases</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="TestCases">TestCases</stat>
 </suite>
 </statistics>
 <errors>
