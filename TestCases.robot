@@ -7,7 +7,54 @@ Library    RequestsLibrary
 Documentation       This project is to test the Temasek Polytechnic Website using Behaviour Driven Development
 Resource    variables.robot
 
+# =====================================GuoJun's Test Cases======================================
 *** Test Cases ***
+Navigate to The Informatics & IT Studies Club
+    [Documentation]  Navigate through the student section to find information about "The Informatics & IT Studies Club."
+    Open TP Website
+    # Step 1: Click on the Students button
+    Click Element    ${STUDENT_BUTTON}
+
+    # Step 2: Click on "Learn More" link
+    Go To    ${LEARN_MORE_LINK}
+
+    # Step 3: Execute JavaScript to remove the element with class "cmp-t-and-c-cookie-box"
+    Execute JavaScript    document.querySelector('.cmp-t-and-c-cookie-box').remove()
+    
+    # Step 4: Click on "Informatics & IT Studies Club" link
+    Click Element    ${CLUB_LINK}
+    # Step 6: Close the browser
+    [Teardown]    Close Browser
+
+    
+
+Test Logo Navigation from Different Pages
+    Open TP Website
+    
+    
+    # Test Case 1: Verify Logo Navigation from the homepage
+    Click Element  xpath=//img[contains(@src, 'tp-logo')]
+    Location Should Be  ${tp_url}
+    
+    # Test Case 2: Verify Logo Navigation from another page
+    Click Element    ${ADULT_BUTTON}
+    Click Element  xpath=//img[contains(@src, 'tp-logo')]
+    Location Should Be  ${tp_url}
+
+    # Test Case 3: Verify Logo Navigation from another page
+    Click Element    ${STUDENT_BUTTON}
+    Click Element  xpath=//img[contains(@src, 'tp-logo')]
+    Location Should Be  ${tp_url}
+
+    # Test Case 4: Verify Logo Navigation from another page
+    Click Element    ${ALUMNI_BUTTON}
+    Click Element  xpath=//img[contains(@src, 'tp-logo')]
+    Location Should Be  ${tp_url}
+# ==================================End of GuoJun's Test Cases==================================
+
+
+
+
 # =====================================Seng Jun's Test Cases======================================
 
 Search for Courses
@@ -71,3 +118,5 @@ Open TP Website
     Maximize Browser Window
     
   
+
+
