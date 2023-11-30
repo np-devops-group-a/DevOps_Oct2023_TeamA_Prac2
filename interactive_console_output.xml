@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.9.12 on darwin)" generated="20231130 23:06:27.448" rpa="false" schemaversion="4">
+<suite id="s1" name="Robot Interactive Console" source="/Users/jiachen/.vscode/extensions/robocorp.robotframework-lsp-1.11.0/src/robotframework_ls/vendored/robotframework_interactive/robot_interactive_console.robot">
+<test id="s1-t1" name="Default Task/Test" line="5">
+<kw name="Interpreter Main Loop" library="MainLoop">
+<kw name="Open Browser">
+<arg>https://tp.edu.sg</arg>
+<arg>chrome</arg>
+<msg timestamp="20231130 23:06:27.930" level="FAIL">No keyword with name 'Open Browser' found.</msg>
+<status status="FAIL" starttime="20231130 23:06:27.930" endtime="20231130 23:06:27.930"/>
+</kw>
+<kw name="Title Should Be">
+<arg>Open House 2024 | Temasek Polytechnic</arg>
+<status status="NOT RUN" starttime="20231130 23:06:27.931" endtime="20231130 23:06:27.931"/>
+</kw>
+<kw name="Wait Until Page Contains Element">
+<arg>xpath=//*[@id="webinar"]/div/div[2]/div[3]</arg>
+<arg>5</arg>
+<status status="NOT RUN" starttime="20231130 23:06:27.931" endtime="20231130 23:06:27.932"/>
+</kw>
+<kw name="Scroll Element Into View">
+<arg>xpath=//*[@id="webinar"]/div/div[2]/div[3]</arg>
+<status status="NOT RUN" starttime="20231130 23:06:27.932" endtime="20231130 23:06:27.932"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20231130 23:06:27.932" endtime="20231130 23:06:27.932"/>
+</kw>
+<status status="PASS" starttime="20231130 23:06:27.457" endtime="20231130 23:06:32.850"/>
+</kw>
+<status status="PASS" starttime="20231130 23:06:27.457" endtime="20231130 23:06:32.850"/>
+</test>
+<status status="PASS" starttime="20231130 23:06:27.449" endtime="20231130 23:06:32.851"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Robot Interactive Console">Robot Interactive Console</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
